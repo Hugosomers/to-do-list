@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
 }
 
 .App {
   width: 100%;
   min-height: 100vh;
-  background-color: #1e1e1e;
-  color: #e1e1e1;
+  background-color: #171717;
+  color: #f9f9f9;
   /* border: 1px solid green; */
 }
 
@@ -17,5 +21,37 @@
   font-size: clamp(2rem, 4vw + 0.2rem, 4rem);
   padding: 20px;
   /* margin: 20px; */
+  /* border: 1px solid red; */
+}
+
+.controlDiv {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.inputs {
+  border: 1px solid #333333;
+  padding: 5px 10px;
+  background-color: #171717;
+  color: #f9f9f9;
+}
+
+.inputs::placeholder {
+  color: #f9f9f9;
+  opacity: 30%;
+}
+
+.addButton {
+  padding: 6px 10px;
+  background-color: #00DF5E;
+  border: none;
+  color: #171717;
+  margin: 0 5px;
+}
+
+.tasksMainDiv {
+  height: 81vh;
+  margin: 10px;
   /* border: 1px solid red; */
 }
