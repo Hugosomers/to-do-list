@@ -6,6 +6,16 @@
 
 .App {
   width: 100%;
-  max-height: 100vh;
-  border: 1px solid red;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  color: #e1e1e1;
+  /* border: 1px solid green; */
+}
+
+.titles {
+  text-align: center;
+  font-size: clamp(2rem, 4vw + 0.2rem, 4rem);
+  padding: 20px;
+  /* margin: 20px; */
+  /* border: 1px solid red; */
 }
