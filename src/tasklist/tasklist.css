@@ -7,6 +7,8 @@
 }
 
 .singleTaskDiv {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
   background-color: #171717;
   margin: 10px;
@@ -17,4 +19,14 @@
 
 .ulList {
   list-style: none;
+}
+
+#trashIcon {
+  color: rgba(247, 4, 4, 0.459);
+  margin: 0 10px;
+}
+
+#checkIcon {
+  color: #00DF5E;
+  margin: 0 5px;
 }
