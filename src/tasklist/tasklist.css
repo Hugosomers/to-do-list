@@ -23,10 +23,15 @@
 
 #trashIcon {
   color: rgba(247, 4, 4, 0.459);
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 #checkIcon {
   color: #00DF5E;
+  margin: 0 5px;
+}
+
+#editIcon {
+  color: #dbdf00;
   margin: 0 5px;
 }

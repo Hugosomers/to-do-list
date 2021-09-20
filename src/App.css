@@ -16,10 +16,46 @@
   /* border: 1px solid green; */
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.menuIcon {
+  position: absolute;
+  top: 23px;
+  left: 10px;
+  font-size: 20px;
+}
+
+.closeIcon {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  background-color: #212121;
+  animation: popLeft 0.5s linear;
+}
+
+@keyframes popLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .titles {
   text-align: center;
   font-size: clamp(2rem, 4vw + 0.2rem, 4rem);
-  padding: 20px;
+  padding: 10px;
   /* margin: 20px; */
   /* border: 1px solid red; */
 }
@@ -45,6 +81,15 @@
 .addButton {
   padding: 6px 10px;
   background-color: #00DF5E;
+  border: none;
+  color: #171717;
+  margin: 0 5px;
+}
+
+.editButton {
+  padding: 6px 10px;
+  background-color: #dbdf00;
+  width: 79px;
   border: none;
   color: #171717;
   margin: 0 5px;
