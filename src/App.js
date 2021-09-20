@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTaskAction, editTaskAction } from './redux/action';
+import { addTaskAction, editTaskAction, completedModeActiveAction } from './redux/action';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import './App.css';
@@ -28,13 +28,18 @@ function App() {
     setMenuToggle(!menuToggle);
   }
 
+  const completeModeTasks = (check) => {
+    dispatch(completedModeActiveAction(check))
+  }
+
   return (
     <main className="App">
       
       {menuToggle ? 
         <div className="menu">
           <AiOutlineClose className="closeIcon" onClick={ menuHandle }/>
-          <h4>Histórico</h4>
+          <h3 onClick={ () => completeModeTasks(false) }>To Do List</h3>
+          <h3 onClick={ () => completeModeTasks(true) }>Histórico</h3>
         </div>
         :
         null

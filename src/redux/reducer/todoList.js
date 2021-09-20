@@ -1,9 +1,10 @@
-import { ADD_TASK, DELETE_TASK, COMPLETE_TASK, EDIT_MODE, EDIT_TASK } from "../action";
+import { ADD_TASK, DELETE_TASK, COMPLETE_TASK, EDIT_MODE, EDIT_TASK, COMPLETED_MODE } from "../action";
 const INITIAL_STATE = {
   tasks: [],
   completedTasks: [],
   editMode: false,
   taskIdEdit: null,
+  completedMode: false,
 }
 
 const todoListReducer = (state = INITIAL_STATE, action) => {
@@ -33,7 +34,13 @@ const todoListReducer = (state = INITIAL_STATE, action) => {
     case EDIT_TASK:
       return {
         ...state,
+        editMode: !state.editMode,
         tasks: state.tasks.map((item, index) => index === state.taskIdEdit ? action.payload : item),
+      }
+    case COMPLETED_MODE:
+      return {
+        ...state,
+        completedMode: action.payload,
       }
     default:
       return state;
