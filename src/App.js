@@ -38,8 +38,8 @@ function App() {
       {menuToggle ? 
         <div className="menu">
           <AiOutlineClose className="closeIcon" onClick={ menuHandle }/>
-          <h3 onClick={ () => completeModeTasks(false) }>To Do List</h3>
-          <h3 onClick={ () => completeModeTasks(true) }>Histórico</h3>
+          <h3 className="linksMenu" onClick={ () => completeModeTasks(false) }>To Do List</h3>
+          <h3 className="linksMenu" onClick={ () => completeModeTasks(true) }>Histórico</h3>
         </div>
         :
         null

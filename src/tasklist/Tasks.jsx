@@ -26,7 +26,7 @@ export default function Tasks() {
   if(!tasksTrue && !completedMode) {
     return(
       <div>
-        <h2>Sem tasks adicionadas.</h2>
+        <h2>Sem tasks adicionadas</h2>
       </div>
     )
   }
@@ -48,6 +48,13 @@ export default function Tasks() {
       </div>
     )
   } else if (completedMode) {
+    if(completedTasks.length < 1) {
+      return(
+        <div>
+          <h2>Sem tasks completas</h2>
+        </div>
+      )
+    }
     return (
       <div className="tasksDiv">
         <ul className="ulList">
